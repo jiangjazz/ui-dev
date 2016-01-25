@@ -1,0 +1,26 @@
+{
+    "name": "ui-dev",
+    "version": "1.3.0",
+    "description": "no",
+    "main": "gulpfile.js",
+    "dependencies": {
+        "express": "~4.8.8",
+        "morgan": "~1.3.0",
+        "compression": "~1.0.11"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.0",
+        "anpmbot": "^1.1.0",
+        "gulp-ruby-sass": "^2.0.5",
+        "gulp-sass": "^2.1.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-minify-css": "^1.2.1",
+        "gulp-plumber": "^1.0.1",
+        "gulp-notify": "^2.2.0"
+    },
+    "scripts":{
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Janzen, Lay",
+    "license": "ISC"
+}
