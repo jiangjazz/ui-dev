@@ -1,7 +1,10 @@
 @charset "UTF-8";
-/**
+/******************************
  * UI框架基础样式
  */
 @import 'color';        //颜色变量
 @import 'variate';      //其他变量
 @import 'mixin';        //mixin生产
+@import 'cssproperty';  //css属性生产（主要css3）
+@import 'animate';      //animate生产
+

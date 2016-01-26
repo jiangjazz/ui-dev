@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/**
+ * css属性生产
+ */
+//盒子阴影
+@mixin box-shadow($value) {
+    @include prefixer(box-shadow, $value, webkit spec);
+}
+//文字阴影
+@mixin text-shadow($value) {
+    @include prefixer(text-shadow, $value, webkit spec);
+}
+//圆角
+@mixin border-radius($value){
+    @include prefixer(border-radius, $value, spec);
+}
+//转换
+@mixin transform($value){
+    @include prefixer(transform, $value, webkit moz ms o spec);
+}
+//设置转换原点
+@mixin transform-origin($value){
+    @include prefixer(transform-origin, $value, webkit moz ms o spec)
+}
+//过渡
+@mixin transition($value){
+    @include prefixer(transition, $value, webkit moz ms o spec);
+}
+//盒子模型
+@mixin box-sizing($value){
+    @include prefixer(box-sizing, $value, webkit moz spec);
+}
+//动画
+@mixin animation($value){
+    @include prefixer(animation, $value, webkit moz ms o spec);
+}
+//兼容透明度
+@mixin opacity($value){
+  opacity: $value / 100;
+  filter : alpha(opacity=$value);
+}

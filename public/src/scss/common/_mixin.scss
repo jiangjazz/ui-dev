@@ -34,40 +34,43 @@ $prefix-for-spec: true !default;
     }
 }
 
-//盒子阴影
-@mixin box-shadow($value) {
-    @include prefixer(box-shadow, $value, webkit spec);
+
+/**
+ * keyframes 前缀
+ */
+$keyframes-for-webkit: true !default;
+$keyframes-for-mozilla: false !default;
+$keyframes-for-microsoft: true !default;
+$keyframes-for-opera: false !default;
+$keyframes-for-spec: true !default;
+
+@mixin keyframes($animationName){
+    @if $keyframes-for-webkit == true {
+        @-webkit-keyframes #{$animationName} {
+            @content;
+        }
+    }
+    @if $keyframes-for-mozilla == true {
+        @-moz-keyframes #{$animationName} {
+            @content;
+        }
+    }
+    @if $keyframes-for-microsoft == true {
+        @-ms-keyframes #{$animationName} {
+            @content;
+        }
+    }
+    @if $keyframes-for-opera == true {
+        @-o-keyframes #{$animationName} {
+            @content;
+        }
+    }
+    @if $keyframes-for-spec == true {
+        @keyframes #{$animationName} {
+            @content;
+        }
+    }
 }
-//文字阴影
-@mixin text-shadow($value) {
-    @include prefixer(text-shadow, $value, webkit spec);
-}
-//圆角
-@mixin border-radius($value){
-    @include prefixer(border-radius, $value, spec);
-}
-//转换
-@mixin transform($value){
-    @include prefixer(transform, $value, webkit moz ms o spec);
-}
-//设置转换原点
-@mixin transform-origin($value){
-    @include prefixer(transform-origin, $value, webkit moz ms o spec)
-}
-//过渡
-@mixin transition($value){
-    @include prefixer(transition, $value, webkit moz ms o spec);
-}
-//盒子模型
-@mixin box-sizing($value){
-    @include prefixer(box-sizing, $value, webkit moz spec);
-}
-//动画
-@mixin animation($value){
-    @include prefixer(animation, $value, webkit moz ms o spec);
-}
-//兼容透明度
-@mixin opacity($value){
-  opacity: $value / 100;
-  filter : alpha(opacity=$value);
-}
+
+
+

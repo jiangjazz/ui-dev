@@ -28,7 +28,7 @@ gulp.task('css', function(){
     return sass(path.css.sass, { style: 'expanded',noCache: true, sourcemap: false})
     .pipe(gulp.dest(path.css.sassDest))
     .pipe(rename({ suffix: '.min' }))
-    //.pipe(minifycss())
+    .pipe(minifycss())
     .pipe(gulp.dest(path.css.dest))
     .pipe(notify({ message: 'Styles task complete' }));
 });
