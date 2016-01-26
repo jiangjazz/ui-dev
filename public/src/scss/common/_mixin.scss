@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/**
+ * mixin生产
+ */
+
+
+/**
+ * 普通属性css3 前缀添加
+ */
+//定义存在的浏览器前缀
+$prefix-for-webkit: true !default;
+$prefix-for-mozilla: true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera: true !default;
+$prefix-for-spec: true !default;
+
+@mixin prefixer ($property, $value, $prefixes){
+    @each $prefix in $prefixes{
+        @if $prefix == webkit and $prefix-for-webkit == true {
+            -webkit-#{$property}: $value;
+        }
+        @else if $prefix == moz and $prefix-for-mozilla == true {
+            -moz-#{$property}: $value;
+        }
+        @else if $prefix == ms and $prefix-for-microsoft == true {
+            -ms-#{$property}: $value;
+        }
+        @else if $prefix == o and $prefix-for-opera == true {
+            -o-#{$property}: $value;
+        }
+        @else if $prefix == spec and $prefix-for-spec == true {
+            #{$property}: $value;
+        }
+    }
+}
+
+//盒子阴影
+@mixin box-shadow($value) {
+    @include prefixer(box-shadow, $value, webkit spec);
+}
+//文字阴影
+@mixin text-shadow($value) {
+    @include prefixer(text-shadow, $value, webkit spec);
+}
+//圆角
+@mixin border-radius($value){
+    @include prefixer(border-radius, $value, spec);
+}
+//转换
+@mixin transform($value){
+    @include prefixer(transform, $value, webkit moz ms o spec);
+}
+//设置转换原点
+@mixin transform-origin($value){
+    @include prefixer(transform-origin, $value, webkit moz ms o spec)
+}
+//过渡
+@mixin transition($value){
+    @include prefixer(transition, $value, webkit moz ms o spec);
+}
+//盒子模型
+@mixin box-sizing($value){
+    @include prefixer(box-sizing, $value, webkit moz spec);
+}
+//动画
+@mixin animation($value){
+    @include prefixer(animation, $value, webkit moz ms o spec);
+}
+//兼容透明度
+@mixin opacity($value){
+  opacity: $value / 100;
+  filter : alpha(opacity=$value);
+}
