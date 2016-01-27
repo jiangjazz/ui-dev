@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ * page页面公用样式
+ */
+.i-block{
+    margin: 20px;
+    padding: 15px 20px;
+    background-color: #fff;
+    @include border-radius(3px);
+    @include box-shadow(1px 3px 5px 0px $shadow);
+}
+//文本容器样式
+.i-word{
+    padding: .5em 1em;
+    font-size: $f_size1;
+}

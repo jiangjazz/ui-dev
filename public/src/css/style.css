@@ -43,6 +43,98 @@
 /******************************
  * 组件样式
  */
+/**
+ * 按钮组件样式
+ */
+.u-btn, .u-btn-success, .u-btn-warning, .u-btn-error, .u-btn-info {
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 2.4em;
+  color: #fff;
+  border: 0;
+  outline: none;
+  padding: 0 20px;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.u-btn:hover, .u-btn-success:hover, .u-btn-warning:hover, .u-btn-error:hover, .u-btn-info:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.min.u-btn, .min.u-btn-success, .min.u-btn-warning, .min.u-btn-error, .min.u-btn-info {
+  height: 25px;
+  line-height: 1.9em;
+  padding: 0 15px;
+}
+.disabled.u-btn, .disabled.u-btn-success, .disabled.u-btn-warning, .disabled.u-btn-error, .disabled.u-btn-info, [disabled].u-btn, [disabled].u-btn-success, [disabled].u-btn-warning, [disabled].u-btn-error, [disabled].u-btn-info {
+  color: #d3d1e7;
+  background: #f3f2f8;
+  border: solid 1px white;
+  cursor: no-drop;
+}
+.disabled.u-btn:hover, .disabled.u-btn-success:hover, .disabled.u-btn-warning:hover, .disabled.u-btn-error:hover, .disabled.u-btn-info:hover, [disabled].u-btn:hover, [disabled].u-btn-success:hover, [disabled].u-btn-warning:hover, [disabled].u-btn-error:hover, [disabled].u-btn-info:hover {
+  color: #d3d1e7;
+  background: #f3f2f8;
+  border: solid 1px white;
+}
+
+.u-btn {
+  color: #4c4f56;
+  background: #fff;
+  border: solid 1px #eeeaff;
+}
+.u-btn:hover {
+  color: #4c4f56;
+  background: white;
+  border: solid 1px #d8d5e8;
+}
+
+.u-btn-success {
+  background: #0cc2aa;
+  border: solid 1px #0dd5bb;
+}
+.u-btn-success:hover {
+  background: #0dd5bb;
+  border: solid 1px #0cc2aa;
+}
+
+.u-btn-warning {
+  background: #f0ad4e;
+  border: solid 1px #ffbe56;
+}
+.u-btn-warning:hover {
+  background: #ffbe56;
+  border: solid 1px #f0ad4e;
+}
+
+.u-btn-error {
+  background: #ff6e5c;
+  border: solid 1px #ff846e;
+}
+.u-btn-error:hover {
+  background: #ff846e;
+  border: solid 1px #ff6e5c;
+}
+
+.u-btn-info {
+  color: #4c4f56;
+  background: #ccc;
+  border: solid 1px #e0e0e0;
+}
+.u-btn-info:hover {
+  color: #4c4f56;
+  background: #e0e0e0;
+  border: solid 1px #ccc;
+}
+
 /******************************
  * 页面公共样式
  */
@@ -50,7 +142,7 @@
  * 基础样式
  */
 /* reset */
-html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, input, button, textarea, menu {
   margin: 0;
   padding: 0;
 }
@@ -69,7 +161,7 @@ caption, th {
   font-weight: normal;
 }
 
-html, body, fieldset, img, iframe, abbr {
+html, body, img, iframe, abbr {
   border: 0;
 }
 
@@ -122,7 +214,7 @@ del, ins, u, s, a, a:hover {
   text-decoration: none;
 }
 
-body, textarea, input, button, select, keygen, legend {
+body, textarea, input, button, select, keygen {
   font: 10.52632px arial, \5b8b\4f53;
   color: #4c4f56;
   outline: 0;
@@ -299,6 +391,23 @@ a, a:hover {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+/**
+ * page页面公用样式
+ */
+.i-block {
+  margin: 20px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 3px 5px 0px #e9e8f6;
+  box-shadow: 1px 3px 5px 0px #e9e8f6;
+}
+
+.i-word {
+  padding: .5em 1em;
+  font-size: 12px;
 }
 
 /******************************

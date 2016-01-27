@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**
+ * 按钮组件样式
+ */
+
+
+
+%btn{
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: $f_size1;
+    line-height: 2.4em;
+    color: #fff;
+    border: 0;
+    outline: none;
+    padding: 0 20px;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+    @include box-sizing(border-box);
+    @include border-radius(3px);
+    &:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    &.min{
+        height: 25px;
+        line-height: 1.9em;
+        padding: 0 15px;
+    }
+    &.disabled,
+    &[disabled]{
+        color: $disabled;
+        background: $bg_disabled;
+        border: solid 1px $bg_disabled*1.1;
+        cursor: no-drop;
+        &:hover{
+            color: $disabled;
+            background: $bg_disabled;
+            border: solid 1px $bg_disabled*1.1;
+        }
+    }
+}
+
+.u-btn{
+    @extend %btn;
+    color: $default;
+    background: $bg_default;
+    border: solid 1px $bc_default*1.1;
+    &:hover{
+        color: $default;
+        background: $bg_default*1.1;
+        border: solid 1px $bc_default;
+    }
+}
+
+.u-btn-success{
+    @extend %btn;
+    background: $bg_success;
+    border: solid 1px $bg_success*1.1;
+    &:hover{
+        background: $bg_success*1.1;
+        border: solid 1px $bg_success;
+    }
+}
+
+.u-btn-warning{
+    @extend %btn;
+    background: $bg_warning;
+    border: solid 1px $bg_warning*1.1;
+    &:hover{
+        background: $bg_warning*1.1;
+        border: solid 1px $bg_warning;
+    }
+}
+
+.u-btn-error{
+    @extend %btn;
+    background: $bg_error;
+    border: solid 1px $bg_error*1.2;
+    &:hover{
+        background: $bg_error*1.2;
+        border: solid 1px $bg_error;
+    }
+}
+
+.u-btn-info{
+    @extend %btn;
+    color: $default;
+    background: $bg_info;
+    border: solid 1px $bg_info*1.1;
+    &:hover{
+        color: $default;
+        background: $bg_info*1.1;
+        border: solid 1px $bg_info;
+    }
+}
+
