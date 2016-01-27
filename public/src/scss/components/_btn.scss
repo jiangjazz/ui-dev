@@ -30,6 +30,10 @@
         line-height: 1.9em;
         padding: 0 15px;
     }
+    &.block{
+        display: block;
+        width: 100%;
+    }
     &.disabled,
     &[disabled]{
         color: $disabled;

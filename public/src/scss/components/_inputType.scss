@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/**
+ * 输入框类组件样式
+ */
+
+
+%inputTextarea{
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    height: 30px;
+    font-size: $f_size1;
+    line-height: 1.5em;
+    outline: none;
+    border: solid 1px $bc_default;
+    @include border-radius(3px);
+    @include box-sizing(border-box);
+    @include box-shadow(inset 0 1px 1px $shadow);
+    &:focus{
+        border-color: $bc_default_focus;
+        @include box-shadow(none);
+    }
+    &.error{
+        border-color: $bc_error;
+        &:focus{
+            border-color: $bc_error;
+        }
+    }
+}
+%input{
+    @extend %inputTextarea;
+    vertical-align: middle;
+    &.min{
+        height: 25px;
+    }
+    &:disabled,
+    &.disabled{
+        color: $disabled;
+        background: $bg_disabled;
+        cursor: no-drop;
+    }
+}
+%textarea{
+    @extend %inputTextarea;
+}
+
+/*具体组件*/
+.u-input{
+    @extend %input;
+}
+
+.u-textarea{
+    @extend %inputTextarea;
+    height: 90px;
+}
+.u-search{
+    width: 200px;
+    position: relative;
+    .u-input{
+        padding-right: 30px;
+    }
+    .icon{
+        margin-top: -0.5em;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+    }
+}
+.u-input-group{
+    width: 200px;
+    &:after{
+        content:".";
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+        overflow:hidden;
+    }
+    .searchCt{
+        display: inline-block;
+        margin-right: 45px;
+        float: left;
+        .u-input{
+            border-right: none;
+            @include border-radius(3px 0 0 3px);
+        }
+    }
+    .barCt{
+        margin-left: -45px;
+        width: 44px;
+        height: 28px;
+        text-align: center;
+        color: #ffffff;
+        font-size: $f_size1;
+        line-height: 2.4em;
+        font-weight: bold;
+        border: 1px solid $bc_default;
+        border-left: none;
+        background: $bg_info;
+        float: right;
+        cursor: pointer;
+        @include border-radius(0 3px 3px 0);
+        @include user-select(none);
+        &:hover{
+            background: $bg_info*1.1;
+        }
+    }
+}
+
+
+
+

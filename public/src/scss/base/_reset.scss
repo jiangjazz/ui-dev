@@ -22,9 +22,13 @@ label,summary{cursor:default;}
 a,button{cursor:pointer;}
 h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
 del,ins,u,s,a,a:hover{text-decoration:none;}
-body,textarea,input,button,select,keygen{font:$f_size1/1.14 arial,\5b8b\4f53;color:$default;outline:0;}
+body,textarea,input,button,select,keygen{font:12px/1.14 arial,\5b8b\4f53;color:$default;outline:0;}
 body{background:$bg_body;}
 a,a:hover{color:$default;}
+
+fieldset{border: 1px solid $bc_default;}
+legend{font-size: $f_size2;font-weight: bold;}
+
 
 /* function */
 .f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}

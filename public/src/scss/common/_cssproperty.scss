@@ -39,3 +39,7 @@
   opacity: $value / 100;
   filter : alpha(opacity=$value);
 }
+//禁止选中文本
+@mixin user-select($value){
+    @include prefixer(user-select, $value, webkit moz ms o spec);
+}
