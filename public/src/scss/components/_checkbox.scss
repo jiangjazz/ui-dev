@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ * 多选组件样式
+ */
+%checkbox{
+    >.bar{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.u-checkbox{
+    @extend %checkbox;
+}

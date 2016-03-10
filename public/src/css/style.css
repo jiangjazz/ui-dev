@@ -1,71 +1,558 @@
-/*
-Error: File to import not found or unreadable: inputType.
-        on line 7 of public/src/scss/components/style.scss
-        from line 6 of public/src/scss/style.scss
+@charset "UTF-8";
+/************************************************************
+ * 入口文件
+ */
+/******************************
+ * UI框架基础样式
+ */
+/**
+ * 颜色变量 （包括文字、背景、边框等）
+ */
+/**
+ * 其他变量（除颜色定义）
+ */
+/**
+ * mixin生产
+ */
+/**
+ * 普通属性css3 前缀添加
+ */
+/**
+ * keyframes 前缀
+ */
+/**
+ * css属性生产
+ */
+/**
+ * animate生产
+ */
+/* @include keyframes('icon-one') {
+    0% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+} */
+/******************************
+ * 组件样式
+ */
+/**
+ * 按钮组件样式
+ */
+.u-btn, .u-btn-success, .u-btn-warning, .u-btn-error, .u-btn-info {
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 2.4em;
+  color: #fff;
+  border: 0;
+  outline: none;
+  padding: 0 20px;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.u-btn:hover, .u-btn-success:hover, .u-btn-warning:hover, .u-btn-error:hover, .u-btn-info:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.min.u-btn, .min.u-btn-success, .min.u-btn-warning, .min.u-btn-error, .min.u-btn-info {
+  height: 25px;
+  line-height: 1.9em;
+  padding: 0 15px;
+}
+.block.u-btn, .block.u-btn-success, .block.u-btn-warning, .block.u-btn-error, .block.u-btn-info {
+  display: block;
+  width: 100%;
+}
+.disabled.u-btn, .disabled.u-btn-success, .disabled.u-btn-warning, .disabled.u-btn-error, .disabled.u-btn-info, [disabled].u-btn, [disabled].u-btn-success, [disabled].u-btn-warning, [disabled].u-btn-error, [disabled].u-btn-info {
+  color: #d3d1e7;
+  background: #f3f2f8;
+  border: solid 1px white;
+  cursor: no-drop;
+}
+.disabled.u-btn:hover, .disabled.u-btn-success:hover, .disabled.u-btn-warning:hover, .disabled.u-btn-error:hover, .disabled.u-btn-info:hover, [disabled].u-btn:hover, [disabled].u-btn-success:hover, [disabled].u-btn-warning:hover, [disabled].u-btn-error:hover, [disabled].u-btn-info:hover {
+  color: #d3d1e7;
+  background: #f3f2f8;
+  border: solid 1px white;
+}
 
-2: /************************************************************
-3:  * 入口文件
-4:  *\/
-5: @import 'common/style';   //UI框架基础
-6: @import 'components/style';   //UI组件样式
-7: @import 'base/style';   //页面公用样式
-8: @import 'page/style';   //页面样式
+.u-btn {
+  color: #4c4f56;
+  background: #fff;
+  border: solid 1px #eeeaff;
+}
+.u-btn:hover {
+  color: #4c4f56;
+  background: white;
+  border: solid 1px #d8d5e8;
+}
 
-Backtrace:
-public/src/scss/components/style.scss:7
-public/src/scss/style.scss:6
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:45:in `import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/engine.rb:278:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'
-C:/Ruby22-x64/bin/sass:23:in `load'
-C:/Ruby22-x64/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: inputType.\A         on line 7 of public/src/scss/components/style.scss\A         from line 6 of public/src/scss/style.scss\A \A 2: /************************************************************\A 3:  * 入口文件\A 4:  */\A 5: @import 'common/style';   //UI框架基础\A 6: @import 'components/style';   //UI组件样式\A 7: @import 'base/style';   //页面公用样式\A 8: @import 'page/style';   //页面样式"; }
+.u-btn-success {
+  background: #0cc2aa;
+  border: solid 1px #0dd5bb;
+}
+.u-btn-success:hover {
+  background: #0dd5bb;
+  border: solid 1px #0cc2aa;
+}
+
+.u-btn-warning {
+  background: #f0ad4e;
+  border: solid 1px #ffbe56;
+}
+.u-btn-warning:hover {
+  background: #ffbe56;
+  border: solid 1px #f0ad4e;
+}
+
+.u-btn-error {
+  background: #ff6e5c;
+  border: solid 1px #ff846e;
+}
+.u-btn-error:hover {
+  background: #ff846e;
+  border: solid 1px #ff6e5c;
+}
+
+.u-btn-info {
+  color: #4c4f56;
+  background: #ccc;
+  border: solid 1px #e0e0e0;
+}
+.u-btn-info:hover {
+  color: #4c4f56;
+  background: #e0e0e0;
+  border: solid 1px #ccc;
+}
+
+/**
+ * 输入框类组件样式
+ */
+.u-input, .u-textarea {
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  line-height: 1.5em;
+  outline: none;
+  border: solid 1px #d8d5e8;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px 1px #e9e8f6;
+  box-shadow: inset 0 1px 1px #e9e8f6;
+}
+.u-input:focus, .u-textarea:focus {
+  border-color: #9a94db;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.error.u-input, .error.u-textarea {
+  border-color: #ff6e5c;
+}
+.error.u-input:focus, .error.u-textarea:focus {
+  border-color: #ff6e5c;
+}
+
+.u-input {
+  vertical-align: middle;
+}
+.min.u-input {
+  height: 25px;
+}
+.u-input:disabled, .disabled.u-input {
+  color: #d3d1e7;
+  background: #f3f2f8;
+  cursor: no-drop;
+}
+
+/*具体组件*/
+.u-textarea {
+  height: 90px;
+}
+
+.u-search {
+  width: 200px;
+  position: relative;
+}
+.u-search .u-input {
+  padding-right: 30px;
+}
+.u-search .icon {
+  margin-top: -0.5em;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+.u-input-group {
+  width: 200px;
+}
+.u-input-group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+.u-input-group .searchCt {
+  display: inline-block;
+  margin-right: 45px;
+  float: left;
+}
+.u-input-group .searchCt .u-input {
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+.u-input-group .barCt {
+  margin-left: -45px;
+  width: 44px;
+  height: 28px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 2.4em;
+  font-weight: bold;
+  border: 1px solid #d8d5e8;
+  border-left: none;
+  background: #ccc;
+  float: right;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.u-input-group .barCt:hover {
+  background: #e0e0e0;
+}
+
+/**
+ * 单选组件样式
+ */
+/**
+ * 多选组件样式
+ */
+.u-checkbox > .bar {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/******************************
+ * 页面公共样式
+ */
+/**
+ * 基础样式
+ */
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html, body, img, iframe, abbr {
+  border: 0;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+[hidefocus], summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 100%;
+}
+
+sup, sub {
+  font-size: 83%;
+}
+
+pre, code, kbd, samp {
+  font-family: inherit;
+}
+
+q:before, q:after {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label, summary {
+  cursor: default;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold;
+}
+
+del, ins, u, s, a, a:hover {
+  text-decoration: none;
+}
+
+body, textarea, input, button, select, keygen {
+  font: 12px/1.14 arial,\5b8b\4f53;
+  color: #4c4f56;
+  outline: 0;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+a, a:hover {
+  color: #4c4f56;
+}
+
+fieldset {
+  border: 1px solid #d8d5e8;
+}
+
+legend {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* function */
+.f-cb:after, .f-cbli li:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  content: ".";
+}
+
+.f-cb, .f-cbli li {
+  zoom: 1;
+}
+
+.f-ib {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.f-dn {
+  display: none;
+}
+
+.f-db {
+  display: block;
+}
+
+.f-fl {
+  float: left;
+}
+
+.f-fr {
+  float: right;
+}
+
+.f-pr {
+  position: relative;
+}
+
+.f-prz {
+  position: relative;
+  zoom: 1;
+}
+
+.f-oh {
+  overflow: hidden;
+}
+
+.f-ff0 {
+  font-family: arial,\5b8b\4f53;
+}
+
+.f-ff1 {
+  font-family: "Microsoft YaHei",\5fae\8f6f\96c5\9ed1,arial,\5b8b\4f53;
+}
+
+.f-fs1 {
+  font-size: 12px;
+}
+
+.f-fs2 {
+  font-size: 14px;
+}
+
+.f-fwn {
+  font-weight: normal;
+}
+
+.f-fwb {
+  font-weight: bold;
+}
+
+.f-tal {
+  text-align: left;
+}
+
+.f-tac {
+  text-align: center;
+}
+
+.f-tar {
+  text-align: right;
+}
+
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.f-vam, .f-vama * {
+  vertical-align: middle;
+}
+
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+
+.f-ti2 {
+  text-indent: 2em;
+}
+
+.f-lhn {
+  line-height: normal;
+}
+
+.f-tdu, .f-tdu:hover {
+  text-decoration: underline;
+}
+
+.f-tdn, .f-tdn:hover {
+  text-decoration: none;
+}
+
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.f-csp {
+  cursor: pointer;
+}
+
+.f-csd {
+  cursor: default;
+}
+
+.f-csh {
+  cursor: help;
+}
+
+.f-csm {
+  cursor: move;
+}
+
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/**
+ * page页面公用样式
+ */
+.i-block {
+  margin: 20px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 3px 5px 0px #e9e8f6;
+  box-shadow: 1px 3px 5px 0px #e9e8f6;
+}
+
+.i-word {
+  padding: .5em 1em;
+  font-size: 12px;
+}
+
+/******************************
+ * 页面样式
+ */
+/**
+ * 测试页面样式
+ */
+a.block {
+  margin: 5px 0;
+}
+
+/* .u-input{
+    margin: 5px 0;
+} */
